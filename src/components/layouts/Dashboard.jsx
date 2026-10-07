@@ -5,9 +5,9 @@ import History from '../History'
 export default function Dashboard(props) {
     return (
         <section id="dashboard">
-            <Stats {...props}/>
+            <Stats {...props} />
             <Countdown {...props} />
-            <History {...props}/>
+            <History {...props} />
         </section>
     )
 }

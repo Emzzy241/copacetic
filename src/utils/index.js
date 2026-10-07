@@ -90,7 +90,6 @@ export function getWordByIndex(wordsDict, index) {
     return { word, definition }
 }
 
-// The space repetition algorithm that we used to plan out the words.
 export function generateDynamicSpacedRepetitionSchedule(
     totalWords,
     maxNewPerDay = 3,
@@ -157,7 +156,7 @@ export function generateDynamicSpacedRepetitionSchedule(
             }
         }
 
-        // Save todayâ€™s schedule (always non-empty now)
+        // Save today’s schedule (always non-empty now)
         schedule[day] = today
 
         // Step 5: Advance the learning queue
@@ -178,7 +177,7 @@ export function generateDynamicSpacedRepetitionSchedule(
             })
             .filter(Boolean)
 
-        // Step 6: Check if weâ€™re done
+        // Step 6: Check if we’re done
         if (nextWordIndex >= totalWords && learningQueue.length === 0) {
             break
         }
